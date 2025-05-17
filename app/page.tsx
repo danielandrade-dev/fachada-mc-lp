@@ -48,7 +48,6 @@ export default function Home() {
 
       <About
         title={about.title}
-        description={about.description}
         mission={about.mission}
         vision={about.vision}
         values={about.values}
