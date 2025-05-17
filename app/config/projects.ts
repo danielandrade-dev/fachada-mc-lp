@@ -1,0 +1,88 @@
+import { Project } from '../types';
+
+export const projects: Project[] = [
+  {
+    id: 'projeto-1',
+    title: 'Limpeza de Fachada - Shopping Center',
+    description: 'Limpeza completa da fachada de vidro de um shopping center de grande porte.',
+    images: [
+      '/projects/shopping-1.jpg',
+      '/projects/shopping-2.jpg',
+      '/projects/shopping-3.jpg',
+    ],
+    client: 'Shopping Center',
+    location: 'São Paulo, SP',
+    date: '2023-12',
+    services: ['limpeza-fachada', 'limpeza-vidros'],
+  },
+  {
+    id: 'projeto-2',
+    title: 'Limpeza Pós Obra - Edifício Comercial',
+    description: 'Limpeza completa após a reforma de um edifício comercial de 20 andares.',
+    images: [
+      '/projects/edificio-1.jpg',
+      '/projects/edificio-2.jpg',
+      '/projects/edificio-3.jpg',
+    ],
+    client: 'Empresa de Tecnologia',
+    location: 'São Paulo, SP',
+    date: '2023-11',
+    services: ['pos-obra', 'limpeza-vidros'],
+  },
+  {
+    id: 'projeto-3',
+    title: 'Limpeza de Vidros - Hotel',
+    description: 'Limpeza dos vidros e fachadas de um hotel de luxo.',
+    images: [
+      '/projects/hotel-1.jpg',
+      '/projects/hotel-2.jpg',
+      '/projects/hotel-3.jpg',
+    ],
+    client: 'Hotel de Luxo',
+    location: 'São Paulo, SP',
+    date: '2023-10',
+    services: ['limpeza-vidros'],
+  },
+  {
+    id: 'projeto-4',
+    title: 'Limpeza de Fachada - Condomínio Residencial',
+    description: 'Limpeza da fachada de um condomínio residencial de alto padrão.',
+    images: [
+      '/projects/condominio-1.jpg',
+      '/projects/condominio-2.jpg',
+      '/projects/condominio-3.jpg',
+    ],
+    client: 'Condomínio Residencial',
+    location: 'São Paulo, SP',
+    date: '2023-09',
+    services: ['limpeza-fachada'],
+  },
+  {
+    id: 'projeto-5',
+    title: 'Limpeza Pós Obra - Shopping Center',
+    description: 'Limpeza completa após a reforma de uma ala do shopping center.',
+    images: [
+      '/projects/shopping-obra-1.jpg',
+      '/projects/shopping-obra-2.jpg',
+      '/projects/shopping-obra-3.jpg',
+    ],
+    client: 'Shopping Center',
+    location: 'São Paulo, SP',
+    date: '2023-08',
+    services: ['pos-obra'],
+  },
+  {
+    id: 'projeto-6',
+    title: 'Limpeza de Vidros - Edifício Comercial',
+    description: 'Limpeza dos vidros e fachadas de um edifício comercial moderno.',
+    images: [
+      '/projects/edificio-vidros-1.jpg',
+      '/projects/edificio-vidros-2.jpg',
+      '/projects/edificio-vidros-3.jpg',
+    ],
+    client: 'Empresa de Consultoria',
+    location: 'São Paulo, SP',
+    date: '2023-07',
+    services: ['limpeza-vidros'],
+  },
+]; 

@@ -1,0 +1,47 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import "./animations.css";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Fachadas MC - Limpeza e Manutenção de Fachadas",
+  description: "Especialistas em limpeza e manutenção de fachadas, oferecendo soluções completas para preservar e valorizar seu patrimônio.",
+  keywords: "limpeza de fachadas, manutenção de fachadas, serviços de fachada, limpeza predial",
+  openGraph: {
+    title: "Fachadas MC - Limpeza e Manutenção de Fachadas",
+    description: "Especialistas em limpeza e manutenção de fachadas, oferecendo soluções completas para preservar e valorizar seu patrimônio.",
+    type: "website",
+    locale: "pt_BR",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="pt-BR" className="scroll-smooth">
+      <head>
+        <link rel="canonical" href="https://fachadasmc.com.br" />
+        <meta name="theme-color" content="#ffffff" />
+      </head>
+      <body className={`${inter.className} antialiased`}>
+        <div className="flex min-h-screen flex-col">
+          {children}
+        </div>
+      </body>
+    </html>
+  );
+}

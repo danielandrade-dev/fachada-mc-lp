@@ -1,0 +1,58 @@
+import { User } from '../types';
+
+export const users: User[] = [
+  {
+    id: 'user-1',
+    name: 'Marcos Costa',
+    email: 'marcos@fachadasmc.com.br',
+    role: 'admin',
+    avatar: '/team/marcos.jpg',
+    createdAt: '2023-01-01',
+    updatedAt: '2024-02-15',
+  },
+  {
+    id: 'user-2',
+    name: 'Ana Silva',
+    email: 'ana@fachadasmc.com.br',
+    role: 'admin',
+    avatar: '/team/ana.jpg',
+    createdAt: '2023-01-01',
+    updatedAt: '2024-02-15',
+  },
+  {
+    id: 'user-3',
+    name: 'Carlos Santos',
+    email: 'carlos@fachadasmc.com.br',
+    role: 'admin',
+    avatar: '/team/carlos.jpg',
+    createdAt: '2023-01-01',
+    updatedAt: '2024-02-15',
+  },
+  {
+    id: 'user-4',
+    name: 'Juliana Lima',
+    email: 'juliana@fachadasmc.com.br',
+    role: 'admin',
+    avatar: '/team/juliana.jpg',
+    createdAt: '2023-01-01',
+    updatedAt: '2024-02-15',
+  },
+  {
+    id: 'user-5',
+    name: 'Roberto Alves',
+    email: 'roberto@fachadasmc.com.br',
+    role: 'admin',
+    avatar: '/team/roberto.jpg',
+    createdAt: '2023-01-01',
+    updatedAt: '2024-02-15',
+  },
+  {
+    id: 'user-6',
+    name: 'Patrícia Costa',
+    email: 'patricia@fachadasmc.com.br',
+    role: 'admin',
+    avatar: '/team/patricia.jpg',
+    createdAt: '2023-01-01',
+    updatedAt: '2024-02-15',
+  },
+]; 
