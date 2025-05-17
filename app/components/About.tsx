@@ -3,8 +3,6 @@
 import Image from 'next/image';
 
 interface AboutProps {
-  title: string;
-
   mission: string;
   vision: string;
   values: string[];
@@ -12,8 +10,6 @@ interface AboutProps {
 }
 
 export default function About({
-  title,
-
   mission,
   vision,
   values,
@@ -22,12 +18,6 @@ export default function About({
   return (
     <section id="sobre" className="py-16 bg-gradient-to-b from-orange-50 to-white">
       <div className="container mx-auto px-4 max-w-5xl">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {title}
-          </h2>
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           <div className="space-y-6">
             <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
