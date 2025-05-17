@@ -39,7 +39,7 @@ export default function Home() {
 
       <Services 
         title="Nossos Serviços"
-        description="Oferecemos soluções completas em limpeza e manutenção de fachadas"
+        description="Oferecemos soluções completas em limpeza de fachadas"
         services={services} 
       />
 

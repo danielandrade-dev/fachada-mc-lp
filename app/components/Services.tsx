@@ -329,7 +329,7 @@ export default function Services({ services }: ServicesProps) {
                   </div>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-6 hidden md:block">
                   <h4 className="text-2xl font-semibold text-gray-900 mb-6">
                     O que oferecemos:
                   </h4>

@@ -3,11 +3,11 @@ import { About } from '../types';
 export const about: About = {
   title: 'Sobre a Fachadas MC',
   description:
-    'Somos uma empresa especializada em limpeza e manutenção de fachadas, com mais de 10 anos de experiência no mercado. Nossa missão é oferecer soluções completas e personalizadas para cada cliente.',
+    'Somos uma empresa especializada em limpeza de fachadas, com mais de 10 anos de experiência no mercado. Nossa missão é oferecer soluções completas e personalizadas para cada cliente.',
   mission:
-    'Proporcionar serviços de excelência em limpeza e manutenção de fachadas, garantindo a satisfação total de nossos clientes e a preservação do patrimônio.',
+    'Proporcionar serviços de excelência em limpeza de fachadas, garantindo a satisfação total de nossos clientes e a preservação do patrimônio.',
   vision:
-    'Ser referência nacional em serviços de limpeza e manutenção de fachadas, reconhecida pela qualidade, inovação e compromisso com o meio ambiente.',
+    'Ser referência nacional em serviços de limpeza de fachadas, reconhecida pela qualidade, inovação e compromisso com o meio ambiente.',
   values: [
     'Excelência no atendimento',
     'Compromisso com a qualidade',
