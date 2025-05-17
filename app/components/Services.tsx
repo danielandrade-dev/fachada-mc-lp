@@ -11,6 +11,7 @@ interface Service {
   description: string;
   image: string;
   features: string[];
+  gallery?: GalleryItem[];
 }
 
 interface ServicesProps {
@@ -105,16 +106,9 @@ function ImageGallery({ items }: { items: GalleryItem[] }) {
   );
 }
 
-export default function Services({ title, description, services }: ServicesProps) {
+export default function Services({ services }: ServicesProps) {
   const facadeServices = services.filter(service => service.id !== 8);
   const safetyService = services.find(service => service.id === 8);
-
-  const ancoragemImages = [
-    '/images/ancoragem/ancoragem-1.jpg',
-    '/images/ancoragem/ancoragem-2.jpg',
-    '/images/ancoragem/ancoragem-3.jpg',
-    '/images/ancoragem/ancoragem-4.jpg',
-  ];
 
   return (
     <section id="servicos" className="py-20 bg-gradient-to-b from-gray-50 to-white">

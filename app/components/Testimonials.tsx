@@ -1,6 +1,7 @@
 import { Testimonial } from '../types';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface TestimonialsProps {
   testimonials: Testimonial[];
@@ -66,12 +67,15 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
               >
                 <div className="flex items-center mb-4">
                   {testimonial.avatar && (
-                    <img
-                      src={testimonial.avatar}
-                      alt={`Foto de ${testimonial.name}`}
-                      className="w-12 h-12 rounded-full mr-4 object-cover"
-                      loading="lazy"
-                    />
+                    <div className="relative w-12 h-12 mr-4">
+                      <Image
+                        src={testimonial.avatar}
+                        alt={`Foto de ${testimonial.name}`}
+                        fill
+                        className="rounded-full object-cover"
+                        sizes="48px"
+                      />
+                    </div>
                   )}
                   <div>
                     <h3 className="font-semibold text-primary-900">{testimonial.name}</h3>

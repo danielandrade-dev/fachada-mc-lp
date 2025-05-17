@@ -41,7 +41,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
         service: '',
         message: '',
       });
-    } catch (err) {
+    } catch {
       setError('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
     } finally {
       setIsSubmitting(false);

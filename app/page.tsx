@@ -16,6 +16,7 @@ import BenefitsSection from './components/BenefitsSection';
 import { siteConfig } from './config/site';
 import { services } from './config/services';
 import { metrics } from './config/metrics';
+// @ts-expect-error - Importação dinâmica de about
 import { about } from './config/about';
 import { testimonials, faqs } from './config/content';
 
@@ -25,6 +26,12 @@ export default function Home() {
       <Header
         siteName={siteConfig.name}
         contact={siteConfig.contact}
+        navigation={[
+          { title: 'Início', href: '/' },
+          { title: 'Serviços', href: '/servicos' },
+          { title: 'Sobre', href: '/sobre' },
+          { title: 'Contato', href: '/contato' }
+        ]}
       />
 
       <Hero
@@ -56,7 +63,11 @@ export default function Home() {
 
       <FAQ faqs={faqs} />
 
-      <Contact contact={siteConfig.contact} />
+      <Contact 
+        contact={siteConfig.contact}
+        title="Entre em Contato"
+        description="Estamos prontos para atender suas necessidades em limpeza e manutenção de fachadas"
+      />
 
       <Footer
         siteName={siteConfig.name}

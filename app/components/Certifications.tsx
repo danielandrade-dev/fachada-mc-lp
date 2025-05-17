@@ -1,4 +1,5 @@
 import { Certification } from '../types';
+import Image from 'next/image';
 
 interface CertificationsProps {
   certifications: Certification[];
@@ -24,10 +25,12 @@ export default function Certifications({ certifications }: CertificationsProps) 
               className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
               <div className="relative h-48">
-                <img
+                <Image
                   src={certification.image}
                   alt={certification.title}
-                  className="w-full h-full object-contain p-4"
+                  fill
+                  className="object-contain p-4"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
               <div className="p-6">

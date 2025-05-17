@@ -1,4 +1,5 @@
 import type { Event } from '../types';
+import Image from 'next/image';
 
 interface EventsProps {
   events: Event[];
@@ -24,10 +25,12 @@ export default function Events({ events }: EventsProps) {
               className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
               <div className="relative h-48">
-                <img
+                <Image
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">

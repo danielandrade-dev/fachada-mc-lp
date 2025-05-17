@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface HeaderProps {
   logo?: string;
@@ -10,9 +11,6 @@ interface HeaderProps {
     title: string;
     href: string;
   }[];
-  contact: {
-    phone: string;
-  };
 }
 
 export default function Header({ logo = '/servicos/LOGO_MC_INVERSO.svg', siteName, navigation = [
@@ -20,7 +18,7 @@ export default function Header({ logo = '/servicos/LOGO_MC_INVERSO.svg', siteNam
   { title: 'Serviços', href: '#servicos' },
   { title: 'Sobre', href: '#sobre' },
   { title: 'Contato', href: '#contato' }
-], contact }: HeaderProps) {
+] }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -44,7 +42,7 @@ export default function Header({ logo = '/servicos/LOGO_MC_INVERSO.svg', siteNam
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <Link href="/" className="flex items-center">
             {logo && (
               <Image
                 src={logo}
@@ -54,25 +52,25 @@ export default function Header({ logo = '/servicos/LOGO_MC_INVERSO.svg', siteNam
                 className="w-[170px] h-auto"
               />
             )}
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navigation.map((item, index) => (
-              <a
+              <Link
                 key={index}
                 href={item.href}
                 className="text-white hover:text-orange-400 transition-colors font-medium"
               >
                 {item.title}
-              </a>
+              </Link>
             ))}
-            <a
+            <Link
               href="#contato"
               className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition-colors font-medium"
             >
               Fale Conosco
-            </a>
+            </Link>
             <div className="flex items-center gap-2 text-white">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
               <span className="text-sm">Atendimento Online</span>
@@ -116,22 +114,22 @@ export default function Header({ logo = '/servicos/LOGO_MC_INVERSO.svg', siteNam
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
               {navigation.map((item, index) => (
-                <a
+                <Link
                   key={index}
                   href={item.href}
                   className="text-white hover:text-orange-400 transition-colors font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.title}
-                </a>
+                </Link>
               ))}
-              <a
+              <Link
                 href="#contato"
                 className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition-colors font-medium text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Fale Conosco
-              </a>
+              </Link>
               <div className="flex items-center justify-center gap-2 text-white">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 <span className="text-sm">Atendimento Online</span>

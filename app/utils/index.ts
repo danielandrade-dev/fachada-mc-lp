@@ -54,7 +54,7 @@ export const generateSlug = (text: string): string => {
 };
 
 // Função para debounce
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
@@ -66,7 +66,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 };
 
 // Função para throttle
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
@@ -161,9 +161,9 @@ export const isValidCNPJ = (cnpj: string): boolean => {
 
   if (cleaned === '00000000000000') return false;
 
-  let size = cleaned.length - 2;
-  let numbers = cleaned.substring(0, size);
-  let digits = cleaned.substring(size);
+  const size = cleaned.length - 2;
+  const numbers = cleaned.substring(0, size);
+  const digits = cleaned.substring(size);
   let sum = 0;
   let pos = size - 7;
 
@@ -175,13 +175,13 @@ export const isValidCNPJ = (cnpj: string): boolean => {
   let result = sum % 11 < 2 ? 0 : 11 - (sum % 11);
   if (result !== parseInt(digits.charAt(0))) return false;
 
-  size = size + 1;
-  numbers = cleaned.substring(0, size);
+  const newSize = size + 1;
+  const newNumbers = cleaned.substring(0, newSize);
   sum = 0;
-  pos = size - 7;
+  pos = newSize - 7;
 
-  for (let i = size; i >= 1; i--) {
-    sum += parseInt(numbers.charAt(size - i)) * pos--;
+  for (let i = newSize; i >= 1; i--) {
+    sum += parseInt(newNumbers.charAt(newSize - i)) * pos--;
     if (pos < 2) pos = 9;
   }
 
