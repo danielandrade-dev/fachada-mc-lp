@@ -32,7 +32,7 @@ export default function FloatingCTA({ phone }: FloatingCTAProps) {
         >
           <div className="flex flex-col gap-4">
             <a
-              href={`https://wa.me/5511960913933`}
+              href={`https://wa.me/${phone.replace(/\D/g, '')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2"

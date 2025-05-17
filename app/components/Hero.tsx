@@ -3,7 +3,6 @@
 import Image from 'next/image';
 
 interface HeroProps {
-  title: string;
   description: string;
   contact: {
     phone: string;
@@ -12,7 +11,7 @@ interface HeroProps {
   };
 }
 
-export default function Hero({ title, description, contact }: HeroProps) {
+export default function Hero({ description, contact }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Pattern */}

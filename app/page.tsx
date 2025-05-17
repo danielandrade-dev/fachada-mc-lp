@@ -34,7 +34,6 @@ export default function Home() {
       />
 
       <Hero
-        title={siteConfig.hero.title}
         description={siteConfig.hero.description}
         contact={siteConfig.contact}
       />
