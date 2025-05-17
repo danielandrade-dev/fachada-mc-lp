@@ -133,13 +133,13 @@ export default function Contact({
             </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-900">Área de Atendimento</h3>
-              <p className="text-sm text-gray-500">Atendimento em toda Grande São Paulo</p>
+              <p className="text-sm text-gray-500">Atendimento na Grande São Paulo e Região Metropolitana</p>
             </div>
           </div>
 
           <div className="space-y-6">
             <div>
-              <h4 className="text-base font-medium text-gray-900 mb-3">Regiões Principais</h4>
+              <h4 className="text-base font-medium text-gray-900 mb-3">Outras Regiões</h4>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {[
                   'Osasco',
@@ -148,9 +148,6 @@ export default function Contact({
                   'Alphaville',
                   'Barueri',
                   'Granja Vianna',
-                  'Santana',
-                  'Mooca',
-                  'Vila Mariana'
                 ].map((city) => (
                   <div key={city} className="flex items-center gap-2 text-sm text-gray-600">
                     <svg className="w-4 h-4 text-orange-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -162,33 +159,6 @@ export default function Contact({
               </div>
             </div>
 
-            <div>
-              <h4 className="text-base font-medium text-gray-900 mb-3">Zonas de Atendimento</h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h5 className="font-medium text-gray-900 mb-2">Zona Norte</h5>
-                  <p className="text-sm text-gray-600">Santana, Tucuruvi, Jaçanã, Tremembé e região</p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h5 className="font-medium text-gray-900 mb-2">Zona Leste</h5>
-                  <p className="text-sm text-gray-600">Mooca, Tatuapé, Penha, Itaquera e região</p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h5 className="font-medium text-gray-900 mb-2">Zona Sul</h5>
-                  <p className="text-sm text-gray-600">Vila Mariana, Santo Amaro, Campo Limpo e região</p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h5 className="font-medium text-gray-900 mb-2">Zona Oeste</h5>
-                  <p className="text-sm text-gray-600">Lapa, Pinheiros, Butantã e região</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-orange-50 rounded-lg p-4">
-              <p className="text-sm text-gray-700">
-                <strong>Observação:</strong> Atendemos também outras localidades da Grande São Paulo. Entre em contato para verificar a disponibilidade em sua região.
-              </p>
-            </div>
           </div>
         </div>
       </div>

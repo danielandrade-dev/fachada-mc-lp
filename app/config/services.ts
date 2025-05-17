@@ -10,8 +10,7 @@ export const services: Service[] = [
     features: [
       "Limpeza de Vidros",
       "Remoção de Sujeira e Poluição",
-      "Tratamento de Chuva Acida",
-      "Estruturas Metálicas"
+      "Tratamento de Chuva Acida"
     ]
   },
   {
@@ -44,7 +43,7 @@ export const services: Service[] = [
     icon: "building",
     image: "/servicos/5b85aa4404c9490caa0d7307cbb886aa.jpg",
     features: [
-      "Verificação de Vedações",
+      "Verificação de Infiltrações",
       "Tratamento de Manchas"
     ]
   },

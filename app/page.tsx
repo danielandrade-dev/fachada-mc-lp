@@ -8,8 +8,6 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingCTA from './components/FloatingCTA';
-import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
 import ScrollToTop from './components/ScrollToTop';
 import BenefitsSection from './components/BenefitsSection';
 
@@ -17,7 +15,6 @@ import { siteConfig } from './config/site';
 import { services } from './config/services';
 import { metrics } from './config/metrics';
 import { about } from './config/about';
-import { testimonials, faqs } from './config/content';
 
 export default function Home() {
   return (
@@ -48,7 +45,6 @@ export default function Home() {
 
       <Metrics metrics={metrics} />
 
-      <Testimonials testimonials={testimonials} />
 
       <About
         title={about.title}
@@ -59,12 +55,10 @@ export default function Home() {
         image={about.image}
       />
 
-      <FAQ faqs={faqs} />
-
       <Contact 
         contact={siteConfig.contact}
         title="Entre em Contato"
-        description="Estamos prontos para atender suas necessidades em limpeza e manutenção de fachadas"
+        description="Estamos Prontos para Atender suas Necessidades em Limpeza de Fachadas"
       />
 
       <Footer
