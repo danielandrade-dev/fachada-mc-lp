@@ -73,17 +73,17 @@ export const services: Service[] = [
         description: "Instalação de linha de vida permanente em aço inox"
       },
       {
-        image: "/servicos/ancoragem/ancoragem-3.jpg",
+        image: "/servicos/ancoragem/ancoragem-4.jpg",
         title: "Postes de Ancoragem",
         description: "Postes fabricados conforme NBR 16325"
       },
       {
-        image: "/servicos/ancoragem/ancoragem-4.jpg",
+        image: "/servicos/ancoragem/ancoragem-2.jpg",
         title: "Teste de Resistência",
         description: "Ensaio de arrancamento estático com laudo"
       },
       {
-        image: "/servicos/ancoragem/ancoragem-2.jpg",
+        image: "/servicos/ancoragem/ancoragem-3.jpg",
         title: "Instalação Profissional",
         description: "Equipe técnica especializada em instalação"
       }
