@@ -36,8 +36,8 @@ export default function Hero({ title, description, contact }: HeroProps) {
             <span className="inline-block px-6 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-medium mb-8">
               Transformando Projetos em Realidade
             </span>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-              {title}
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+            Limpeza de Fachadas <br />Alta Qualidade em SP
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto">
               {description.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ')}

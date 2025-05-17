@@ -33,24 +33,24 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
   if (isLoading) {
     return (
       <div className="flex justify-center items-center min-h-[400px]">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-600"></div>
       </div>
     );
   }
 
   return (
-    <section className="bg-primary-50 py-16" aria-label="Depoimentos de clientes">
-      <div className="container mx-auto px-4">
+    <section className="bg-gradient-to-b from-orange-50 to-white py-16" aria-label="Depoimentos de clientes">
+      <div className="container mx-auto px-4 max-w-5xl">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold text-primary-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             O que nossos clientes dizem
           </h2>
-          <p className="text-primary-700 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Confira os depoimentos de alguns dos nossos clientes satisfeitos com nossos serviços
           </p>
         </motion.div>
@@ -63,7 +63,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-xl shadow-sm hover:shadow-md p-6 transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
                   {testimonial.avatar && (
@@ -78,14 +78,14 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
                     </div>
                   )}
                   <div>
-                    <h3 className="font-semibold text-primary-900">{testimonial.name}</h3>
+                    <h3 className="font-semibold text-gray-900">{testimonial.name}</h3>
                     {testimonial.role && (
-                      <p className="text-primary-600 text-sm">{testimonial.role}</p>
+                      <p className="text-orange-600 text-sm">{testimonial.role}</p>
                     )}
-                    <p className="text-primary-600 text-sm">{testimonial.company}</p>
+                    <p className="text-gray-600 text-sm">{testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-primary-700">{testimonial.content}</p>
+                <p className="text-gray-600">{testimonial.content}</p>
                 <div className="mt-4 flex text-yellow-400" role="img" aria-label={`${testimonial.rating} de 5 estrelas`}>
                   {[...Array(5)].map((_, i) => (
                     <svg
@@ -109,19 +109,19 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
             <div className="flex justify-center mt-8 gap-4">
               <button
                 onClick={prevPage}
-                className="p-2 rounded-full bg-primary-100 hover:bg-primary-200 transition-colors"
+                className="p-2 rounded-full bg-orange-100 hover:bg-orange-200 transition-colors"
                 aria-label="Depoimento anterior"
               >
-                <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
               <button
                 onClick={nextPage}
-                className="p-2 rounded-full bg-primary-100 hover:bg-primary-200 transition-colors"
+                className="p-2 rounded-full bg-orange-100 hover:bg-orange-200 transition-colors"
                 aria-label="Próximo depoimento"
               >
-                <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>

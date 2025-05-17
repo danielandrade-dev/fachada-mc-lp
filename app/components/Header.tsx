@@ -37,8 +37,8 @@ export default function Header({ logo = '/servicos/LOGO_MC_INVERSO.svg', siteNam
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-black/95 shadow-sm backdrop-blur-sm'
-          : 'bg-black/80'
+          ? 'bg-gray-900 shadow-sm backdrop-blur-sm'
+          : 'bg-gray-900/95'
       }`}
     >
       <div className="container mx-auto px-4">
@@ -62,18 +62,20 @@ export default function Header({ logo = '/servicos/LOGO_MC_INVERSO.svg', siteNam
               <Link
                 key={index}
                 href={item.href}
-                className="text-white hover:text-orange-400 transition-colors font-medium"
+                className="text-gray-300 hover:text-orange-500 transition-colors font-medium"
               >
                 {item.title}
               </Link>
             ))}
             <Link
-              href="#contato"
-              className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition-colors font-medium"
+              href="https://wa.me/5511960913933"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition-colors font-medium"
             >
               Fale Conosco
             </Link>
-            <div className="flex items-center gap-2 text-white">
+            <div className="flex items-center gap-2 text-gray-300">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
               <span className="text-sm">Atendimento Online</span>
             </div>
@@ -81,7 +83,7 @@ export default function Header({ logo = '/servicos/LOGO_MC_INVERSO.svg', siteNam
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white hover:text-orange-400 transition-colors"
+            className="md:hidden text-gray-300 hover:text-orange-500 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg
@@ -112,27 +114,29 @@ export default function Header({ logo = '/servicos/LOGO_MC_INVERSO.svg', siteNam
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-black/95 border-t border-gray-800">
+        <div className="md:hidden bg-gray-900 border-t border-gray-800">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
               {navigation.map((item, index) => (
                 <Link
                   key={index}
                   href={item.href}
-                  className="text-white hover:text-orange-400 transition-colors font-medium py-2"
+                  className="text-gray-300 hover:text-orange-500 transition-colors font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.title}
                 </Link>
               ))}
               <Link
-                href="#contato"
-                className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition-colors font-medium text-center"
+                href="https://wa.me/5511999999999"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition-colors font-medium text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Fale Conosco
               </Link>
-              <div className="flex items-center justify-center gap-2 text-white">
+              <div className="flex items-center justify-center gap-2 text-gray-300">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 <span className="text-sm">Atendimento Online</span>
               </div>

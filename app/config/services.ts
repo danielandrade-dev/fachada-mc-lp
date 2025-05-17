@@ -4,72 +4,66 @@ export const services: Service[] = [
   {
     id: 1,
     title: "Limpeza de Fachadas",
-    description: "Especialistas em limpeza de fachadas! Resultados imediatos e duradouros para vidros, concreto, granito e outros materiais.",
+    description: "Resultados imediatos e duradouros para vidro, concreto, granito e outras superfícies.",
     icon: "building",
     image: "/servicos/5b85aa4404c9490caa0d7307cbb886aa.jpg",
     features: [
-      "Limpeza de vidros",
-      "Remoção de sujeira e poluição",
-      "Tratamento de manchas",
-      "Limpeza de estruturas metálicas"
+      "Limpeza de Vidros",
+      "Remoção de Sujeira e Poluição",
+      "Tratamento de Chuva Acida",
+      "Estruturas Metálicas"
     ]
   },
   {
     id: 2,
     title: "Polimento de ACM",
-    description: "Especialistas em polimento de ACM! Recuperamos o brilho e a beleza original do seu revestimento.",
+    description: "Recuperamos o Brilho e a Beleza do seu Revestimento.",
     icon: "sparkles",
     image: "/servicos/8d96bf3ff02249a4ad11b5f7102d014e.jpg",
     features: [
-      "Polimento profissional",
-      "Remoção de oxidação",
-      "Revitalização da superfície",
-      "Tratamento anti-corrosivo"
+      "Polimento Profissional",
+      "Revitalização da Superfície",
     ]
   },
   {
     id: 4,
     title: "Vedação de Vidros",
-    description: "Especialistas em vedação! Acabe com as infiltrações e garanta conforto e economia de energia em sua fachada.",
+    description: "Acabe Com As Infiltrações E Garanta A Proteção Da Sua Fachada.",
     icon: "window",
     image: "/servicos/5b85aa4404c9490caa0d7307cbb886aa.jpg",
     features: [
-      "Vedação de juntas",
-      "Aplicação de selantes",
-      "Reparo de infiltrações",
-      "Manutenção preventiva"
+      "Vedação com Selante PU",
+      "Reparos de Infiltrações",
+      "Manutenção Preventiva"
     ]
   },
   {
     id: 5,
     title: "Limpeza de Fachadas em Pele de Vidro",
-    description: "Especialistas em pele de vidro! Limpeza especializada para estruturas em pele de vidro, com técnicas modernas e seguras.",
+    description: "Limpeza de estruturas em pele de vidro, garantindo transparência e durabilidade.",
     icon: "building",
     image: "/servicos/5b85aa4404c9490caa0d7307cbb886aa.jpg",
     features: [
-      "Limpeza especializada",
-      "Manutenção de estruturas",
-      "Verificação de vedações",
-      "Tratamento de manchas"
+      "Verificação de Vedações",
+      "Tratamento de Manchas"
     ]
   },
   {
     id: 6,
     title: "Hidrojateamento de Fachada",
-    description: "Especialistas em hidrojateamento! Removemos sujeiras persistentes com eficiência, sem danificar sua fachada.",
+    description: "Removemos Sujidades Persistentes com Eficiência, Sem Danificar Sua Fachada.",
     icon: "water",
     image: "/servicos/5b85aa4404c9490caa0d7307cbb886aa.jpg",
     features: [
-      "Limpeza com alta pressão",
-      "Remoção de sujeiras persistentes",
-      "Tratamento de superfícies",
-      "Limpeza ecológica"
+      "Limpeza com Equipamento de Alta Pressão",
+      "Remoção de Sujidades Persistentes",
+      "Aplicação de Produtos Químicos Específicos para Cada Superfície"
     ]
   },
   {
     id: 8,
     title: "Instalação de Ancoragem e Linha de Vida",
-    description: "Especialistas em segurança! Instalamos sistemas de proteção para trabalhos em altura, garantindo a segurança da sua equipe e conformidade com as normas NR-35. Oferecemos soluções personalizadas para cada tipo de fachada.",
+    description: "Instalamos Sistemas de Proteção, para Trabalhos em Altura, Garantindo a Segurança da Sua Equipe e Conformidade com as Normas NR-35. Oferecemos Soluções Personalizadas para Cada Tipo de Fachada.",
     icon: "safety",
     image: "/servicos/5b85aa4404c9490caa0d7307cbb886aa.jpg",
     gallery: [
@@ -84,12 +78,12 @@ export const services: Service[] = [
         description: "Postes fabricados conforme NBR 16325"
       },
       {
-        image: "/servicos/ancoragem/ancoragem-2.jpg",
+        image: "/servicos/ancoragem/ancoragem-4.jpg",
         title: "Teste de Resistência",
         description: "Ensaio de arrancamento estático com laudo"
       },
       {
-        image: "/servicos/ancoragem/ancoragem-4.jpg",
+        image: "/servicos/ancoragem/ancoragem-2.jpg",
         title: "Instalação Profissional",
         description: "Equipe técnica especializada em instalação"
       }

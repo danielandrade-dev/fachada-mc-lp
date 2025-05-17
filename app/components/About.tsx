@@ -20,24 +20,24 @@ export default function About({
   image,
 }: AboutProps) {
   return (
-    <section id="sobre" className="py-24 bg-gradient-to-b from-white to-orange-50/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+    <section id="sobre" className="py-16 bg-gradient-to-b from-orange-50 to-white">
+      <div className="container mx-auto px-4 max-w-5xl">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {title}
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-600">
             {description}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="bg-orange-100 p-3 rounded-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div className="space-y-6">
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-orange-100 p-2 rounded-full">
                   <svg
-                    className="w-8 h-8 text-orange-600"
+                    className="w-6 h-6 text-orange-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -50,16 +50,16 @@ export default function About({
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Missão</h3>
+                <h3 className="text-lg font-semibold text-gray-900">Missão</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed">{mission}</p>
+              <p className="text-gray-600">{mission}</p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="bg-orange-100 p-3 rounded-full">
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-orange-100 p-2 rounded-full">
                   <svg
-                    className="w-8 h-8 text-orange-600"
+                    className="w-6 h-6 text-orange-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -78,16 +78,16 @@ export default function About({
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Visão</h3>
+                <h3 className="text-lg font-semibold text-gray-900">Visão</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed">{vision}</p>
+              <p className="text-gray-600">{vision}</p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="bg-orange-100 p-3 rounded-full">
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-orange-100 p-2 rounded-full">
                   <svg
-                    className="w-8 h-8 text-orange-600"
+                    className="w-6 h-6 text-orange-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -100,45 +100,33 @@ export default function About({
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Valores</h3>
+                <h3 className="text-lg font-semibold text-gray-900">Valores</h3>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {values.map((value, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-orange-50 transition-colors duration-300 group"
+                    className="flex items-center gap-2 text-sm text-gray-600"
                   >
-                    <svg
-                      className="w-5 h-5 text-orange-600 group-hover:scale-110 transition-transform duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
+                    <svg className="w-4 h-4 text-orange-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-gray-700 group-hover:text-orange-600 transition-colors duration-300">
-                      {value}
-                    </span>
+                    {value}
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+          <div className="relative h-[500px] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
             <Image
               src={image}
               alt="Sobre nós"
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
+              className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
+              priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
         </div>
       </div>

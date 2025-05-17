@@ -1,6 +1,9 @@
 'use client';
 
+import Image from 'next/image';
+
 interface FooterProps {
+  logo?: string;
   siteName: string;
   description: string;
   contact: {
@@ -20,6 +23,7 @@ interface FooterProps {
 }
 
 export default function Footer({
+  logo = '/servicos/LOGO_MC_INVERSO.svg',
   siteName,
   description,
   contact,
@@ -34,9 +38,17 @@ export default function Footer({
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           <div>
-            <h2 className="text-2xl font-bold text-orange-500 mb-6">
-              {siteName}
-            </h2>
+            <div className="mb-6">
+              {logo && (
+                <Image
+                  src={logo}
+                  alt={siteName}
+                  width={170}
+                  height={170}
+                  className="w-[170px] h-auto"
+                />
+              )}
+            </div>
             <p className="text-gray-300 leading-relaxed mb-6">
               {description}
             </p>

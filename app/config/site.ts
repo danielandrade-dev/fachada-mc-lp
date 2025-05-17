@@ -17,11 +17,11 @@ interface SiteConfig {
 export const siteConfig: SiteConfig = {
   name: 'Fachadas MC',
   description:
-    'Especialistas em limpeza e manutenção de fachadas, oferecendo soluções completas para preservar e valorizar seu patrimônio.',
+    'Especialistas em limpeza de fachadas, oferecendo soluções completas para preservar e valorizar seu patrimônio.',
   hero: {
     title: 'Limpeza de Fachadas Alta Qualidade em SP',
     description:
-      'Especialistas em limpeza de fachadas com mais de 10 anos de experiência',
+      'Uma década de excelência em limpeza de fachadas',
   },
   url: 'https://fachadasmc.com.br',
   ogImage: '/servicos/LOGO_MC_INVERSO.svg',

@@ -48,7 +48,7 @@ export default function BenefitsSection() {
         Por que escolher nossos serviços?
       </h2>
       <p className="text-base md:text-lg text-gray-600 mb-8 text-center max-w-2xl">
-        Conheça nossos diferenciais que garantem qualidade, segurança e tranquilidade em cada etapa do serviço prestado.
+        Qualidade, Segurança e Tranquilidade <br />Em cada etapa do serviço prestado.
       </p>
       <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-2">
         {items.map((item) => (
