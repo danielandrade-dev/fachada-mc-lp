@@ -140,7 +140,7 @@ export interface Notification {
 
 // Tipos para métricas
 export interface Metric {
-  id: number;
+  id: number | string;
   value: string;
   label: string;
 }
