@@ -23,8 +23,7 @@ export interface Testimonial {
   id: number | string;
   name: string;
   company: string;
-  text: string;
-  content?: string;
+  content: string;
   role?: string;
   avatar?: string;
   rating: number;
@@ -147,7 +146,7 @@ export interface Metric {
 
 // Tipos para FAQ
 export interface FAQ {
-  id: number;
+  id: number | string;
   question: string;
   answer: string;
   category: string;

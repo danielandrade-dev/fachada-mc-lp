@@ -85,7 +85,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
                     <p className="text-primary-600 text-sm">{testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-primary-700">{testimonial.content || testimonial.text}</p>
+                <p className="text-primary-700">{testimonial.content}</p>
                 <div className="mt-4 flex text-yellow-400" role="img" aria-label={`${testimonial.rating} de 5 estrelas`}>
                   {[...Array(5)].map((_, i) => (
                     <svg

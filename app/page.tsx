@@ -16,7 +16,6 @@ import BenefitsSection from './components/BenefitsSection';
 import { siteConfig } from './config/site';
 import { services } from './config/services';
 import { metrics } from './config/metrics';
-// @ts-expect-error - Importação dinâmica de about
 import { about } from './config/about';
 import { testimonials, faqs } from './config/content';
 

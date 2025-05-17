@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Contact } from '../types';
 
 interface HeaderProps {
   logo?: string;
   siteName: string;
+  contact: Contact;
   navigation: {
     title: string;
     href: string;
