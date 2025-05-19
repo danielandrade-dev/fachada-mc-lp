@@ -6,7 +6,7 @@ export const services: Service[] = [
     title: "Limpeza de Fachadas",
     description: "Resultados imediatos e duradouros para vidro, concreto, granito e outras superfícies.",
     icon: "building",
-    image: "/servicos/5b85aa4404c9490caa0d7307cbb886aa.jpg",
+    image: "/servicos/hidrojateamento_breezes.jpg",
     features: [
       "Limpeza de Vidros",
       "Remoção de Sujeira e Poluição",
@@ -18,7 +18,7 @@ export const services: Service[] = [
     title: "Polimento de ACM",
     description: "Recuperamos o Brilho e a Beleza do seu Revestimento.",
     icon: "sparkles",
-    image: "/servicos/8d96bf3ff02249a4ad11b5f7102d014e.jpg",
+    image: "/servicos/polimento.jpg",
     features: [
       "Polimento Profissional",
       "Revitalização da Superfície",
@@ -29,7 +29,7 @@ export const services: Service[] = [
     title: "Vedação de Vidros",
     description: "Acabe Com As Infiltrações E Garanta A Proteção Da Sua Fachada.",
     icon: "window",
-    image: "/servicos/5b85aa4404c9490caa0d7307cbb886aa.jpg",
+    image: "/servicos/limpeza_vidros.jpg",
     features: [
       "Vedação com Selante PU",
       "Reparos de Infiltrações",
@@ -41,7 +41,7 @@ export const services: Service[] = [
     title: "Limpeza de Fachadas em Pele de Vidro",
     description: "Limpeza de estruturas em pele de vidro, garantindo transparência e durabilidade.",
     icon: "building",
-    image: "/servicos/5b85aa4404c9490caa0d7307cbb886aa.jpg",
+    image: "/servicos/limpeza_pele_de_vidros.jpg",
     features: [
       "Verificação de Infiltrações",
       "Tratamento de Manchas"
@@ -52,7 +52,7 @@ export const services: Service[] = [
     title: "Hidrojateamento de Fachada",
     description: "Removemos Sujidades Persistentes com Eficiência, Sem Danificar Sua Fachada.",
     icon: "water",
-    image: "/servicos/5b85aa4404c9490caa0d7307cbb886aa.jpg",
+    image: "/servicos/hidrojateamento.jpg",
     features: [
       "Limpeza com Equipamento de Alta Pressão",
       "Remoção de Sujidades Persistentes",
@@ -64,7 +64,7 @@ export const services: Service[] = [
     title: "Instalação de Ancoragem e Linha de Vida",
     description: "Instalamos Sistemas de Proteção, para Trabalhos em Altura, Garantindo a Segurança da Sua Equipe e Conformidade com as Normas NR-35. Oferecemos Soluções Personalizadas para Cada Tipo de Fachada.",
     icon: "safety",
-    image: "/servicos/5b85aa4404c9490caa0d7307cbb886aa.jpg",
+    image: "/servicos/limpeza_vidros.jpg",
     gallery: [
       {
         image: "/servicos/ancoragem/ancoragem-1.jpg",

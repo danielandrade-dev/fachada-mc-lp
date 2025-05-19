@@ -24,9 +24,9 @@ export default function Home() {
         contact={siteConfig.contact}
         navigation={[
           { title: 'Início', href: '/' },
-          { title: 'Serviços', href: '/servicos' },
-          { title: 'Sobre', href: '/sobre' },
-          { title: 'Contato', href: '/contato' }
+          { title: 'Serviços', href: '/#servicos' },
+          { title: 'Sobre', href: '/#sobre' },
+          { title: 'Contato', href: '/#contato' }
         ]}
       />
 
