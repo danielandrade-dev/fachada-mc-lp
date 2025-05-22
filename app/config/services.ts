@@ -29,7 +29,7 @@ export const services: Service[] = [
     title: "Vedação de Vidros",
     description: "Acabe Com As Infiltrações E Garanta A Proteção Da Sua Fachada.",
     icon: "window",
-    image: "/servicos/limpeza_vidros.jpg",
+    image: "/servicos/vidro_vedacao.jpg",
     features: [
       "Vedação com Selante PU",
       "Reparos de Infiltrações",
