@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 import "./animations.css";
 
@@ -36,6 +37,7 @@ export default function RootLayout({
       <head>
         <link rel="canonical" href="https://fachadasmc.com.br" />
         <meta name="theme-color" content="#ffffff" />
+        <GoogleAnalytics gaId="GTM-TSD7RCD4" />
       </head>
       <body className={`${inter.className} antialiased`}>
         <div className="flex min-h-screen flex-col">
