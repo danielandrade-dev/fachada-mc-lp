@@ -10,6 +10,8 @@ import Footer from './components/Footer';
 import FloatingCTA from './components/FloatingCTA';
 import ScrollToTop from './components/ScrollToTop';
 import BenefitsSection from './components/BenefitsSection';
+import RotatingKeywords from './components/RotatingKeywords';
+import ClientsSlider from './components/ClientsSlider';
 
 import { siteConfig } from './config/site';
 import { services } from './config/services';
@@ -25,10 +27,13 @@ export default function Home() {
         navigation={[
           { title: 'Início', href: '/' },
           { title: 'Serviços', href: '/#servicos' },
+          { title: 'Projetos', href: '/projetos' },
           { title: 'Sobre', href: '/#sobre' },
           { title: 'Contato', href: '/#contato' }
         ]}
       />
+
+      <RotatingKeywords />
 
       <Hero
         description={siteConfig.hero.description}
@@ -37,10 +42,10 @@ export default function Home() {
 
       <BenefitsSection />
 
-      <Services 
+      <Services
         title="Nossos Serviços"
         description="Oferecemos soluções completas em limpeza de fachadas"
-        services={services} 
+        services={services}
       />
 
       <Metrics metrics={metrics} />
@@ -53,7 +58,9 @@ export default function Home() {
         image={about.image}
       />
 
-      <Contact 
+      <ClientsSlider />
+
+      <Contact
         contact={siteConfig.contact}
         title="Entre em Contato"
         description="Estamos Prontos para Atender suas Necessidades em Limpeza de Fachadas"
