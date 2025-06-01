@@ -1,7 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
 const keywords = [
     'Limpeza de Fachada',
     'Limpeza de Vidros',

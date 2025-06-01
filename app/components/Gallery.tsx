@@ -43,7 +43,7 @@ export default function Gallery({ initialImages }: GalleryProps) {
         } else if (e.key === 'Escape') {
             setSelectedImageIndex(null);
         }
-    }, [initialImages.length]);
+    }, [initialImages.length, selectedImageIndex]);
 
     useEffect(() => {
         if (selectedImageIndex !== null) {

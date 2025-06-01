@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
 
+export const dynamic = 'force-static';
+
 export async function GET() {
     try {
         const files = await fs.readdir(path.join(process.cwd(), 'public/galeria'));
