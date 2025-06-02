@@ -27,24 +27,31 @@ export default function ImageSlider({ images }: ImageSliderProps) {
         if (emblaApi) emblaApi.scrollNext();
     }, [emblaApi]);
 
-    const handleModalPrev = () => {
+    const handleModalPrev = useCallback(() => {
         if (selectedImageIndex !== null) {
             setSelectedImageIndex((selectedImageIndex - 1 + images.length) % images.length);
         }
-    };
+    }, [selectedImageIndex, images.length, setSelectedImageIndex]);
 
-    const handleModalNext = () => {
+    const handleModalNext = useCallback(() => {
         if (selectedImageIndex !== null) {
             setSelectedImageIndex((selectedImageIndex + 1) % images.length);
         }
-    };
+    }, [selectedImageIndex, images.length, setSelectedImageIndex]);
 
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = useCallback((e: KeyboardEvent) => {
         if (selectedImageIndex === null) return;
         if (e.key === 'ArrowLeft') handleModalPrev();
         if (e.key === 'ArrowRight') handleModalNext();
         if (e.key === 'Escape') setSelectedImageIndex(null);
-    };
+    }, [selectedImageIndex, handleModalPrev, handleModalNext, setSelectedImageIndex]);
+
+    useEffect(() => {
+        if (selectedImageIndex !== null) {
+            window.addEventListener('keydown', handleKeyDown);
+            return () => window.removeEventListener('keydown', handleKeyDown);
+        }
+    }, [selectedImageIndex, handleKeyDown]);
 
     return (
         <>
