@@ -52,7 +52,7 @@ function ImageGallery({ items }: { items: GalleryItem[] }) {
           ))}
         </div>
       </div>
-      
+
       {/* Botões de navegação */}
       <button
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all"
@@ -72,7 +72,7 @@ function ImageGallery({ items }: { items: GalleryItem[] }) {
           />
         </svg>
       </button>
-      
+
       <button
         className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all"
         onClick={scrollNext}
@@ -110,6 +110,22 @@ export default function Services({ services }: ServicesProps) {
   const facadeServices = services.filter(service => service.id !== 8);
   const safetyService = services.find(service => service.id === 8);
 
+  const getServiceId = (service: Service) => {
+    switch (service.id) {
+      case 1:
+        return 'servicos';
+      case 2:
+        return 'servicos-acm';
+      case 4:
+      case 5:
+        return 'servicos-pele-vidro';
+      case 8:
+        return 'servicos-ancoragem';
+      default:
+        return `servico-${service.id}`;
+    }
+  };
+
   return (
     <section id="servicos" className="py-20 bg-gradient-to-b from-orange-50 to-white">
       <div className="container mx-auto px-4">
@@ -127,8 +143,9 @@ export default function Services({ services }: ServicesProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {facadeServices.map((service, index) => (
               <div
+                id={getServiceId(service)}
                 key={index}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 scroll-mt-24"
               >
                 <div className="relative h-56">
                   <Image
@@ -180,12 +197,9 @@ export default function Services({ services }: ServicesProps) {
 
         {/* Seção de Segurança */}
         {safetyService && (
-          <div className="bg-gradient-to-r from-orange-50 via-orange-100 to-orange-50 rounded-3xl p-12">
+          <div id="servicos-ancoragem" className="bg-gradient-to-r from-orange-50 via-orange-100 to-orange-50 rounded-3xl p-12 scroll-mt-24">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <span className="inline-block px-6 py-2 bg-orange-500 text-white text-sm font-semibold rounded-full mb-6 shadow-lg">
-                  Serviço Complementar
-                </span>
                 <h3 className="text-4xl font-bold text-gray-900 mb-4">
                   {safetyService.title}
                 </h3>
@@ -201,7 +215,7 @@ export default function Services({ services }: ServicesProps) {
 
               <div className="grid lg:grid-cols-2 gap-12 items-start">
                 <div className="space-y-6">
-                  <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+                  <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl hidden md:block">
                     <Image
                       src={safetyService.image}
                       alt={safetyService.title}
@@ -217,7 +231,7 @@ export default function Services({ services }: ServicesProps) {
                       <ImageGallery items={safetyService.gallery} />
                     </div>
                   )}
-                  
+
                   {/* Seção de Certificações */}
                   <div className="bg-white rounded-2xl p-6 shadow-lg">
                     <h4 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-3">

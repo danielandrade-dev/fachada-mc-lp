@@ -64,8 +64,8 @@ export default function BenefitsSection() {
             <hr className="border-t border-white w-4/5 mb-3 opacity-60" />
             <ul className="space-y-1 text-center w-full">
               {item.content.map((line, idx) => (
-                <li key={idx} className="flex items-center gap-2 text-sm text-white font-normal leading-snug w-full justify-center">
-                  <FaCheck className="text-white flex-shrink-0" size={14} aria-hidden="true" />
+                <li key={idx} className="flex items-start gap-2 text-sm text-white font-normal leading-snug w-full justify-center">
+                  <FaCheck className="text-white flex-shrink-0 mt-1" size={14} aria-hidden="true" />
                   <span>{line}</span>
                 </li>
               ))}

@@ -13,7 +13,7 @@ interface HeroProps {
 
 export default function Hero({ description, contact }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-gray-50">
         <div className="absolute inset-0 bg-[url('/patterns/pattern.svg')] opacity-10 animate-pulse" />
@@ -29,29 +29,29 @@ export default function Hero({ description, contact }: HeroProps) {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-32 relative">
+      <div className="container mx-auto px-4 py-12 md:py-32 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-12">
-            <span className="inline-block px-6 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-medium mb-8">
+          <div className="mb-6 md:mb-12">
+            <span className="inline-block px-4 md:px-6 py-1.5 md:py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-medium mb-4 md:mb-8">
               Transformando Projetos em Realidade
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-            Limpeza de Fachadas <br />Alta Qualidade em SP
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-gray-900 mb-4 md:mb-8 leading-tight">
+              Limpeza de Fachadas <br />Alta Qualidade em SP
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base md:text-xl text-gray-600 mb-6 md:mb-12 leading-relaxed max-w-3xl mx-auto">
               {description.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ')}
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-6 justify-center">
             <a
               href={`https://wa.me/${contact.phone.replace(/\D/g, '')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-orange-600 text-white px-8 py-4 rounded-full hover:bg-orange-700 transition-all duration-300 text-center flex items-center justify-center gap-3 shadow-lg hover:shadow-xl hover:-translate-y-0.5 font-medium"
+              className="group bg-orange-600 text-white px-6 md:px-8 py-2.5 md:py-4 rounded-full hover:bg-orange-700 transition-all duration-300 text-center flex items-center justify-center gap-3 shadow-lg hover:shadow-xl hover:-translate-y-0.5 font-medium text-sm md:text-base"
             >
               <svg
-                className="w-6 h-6"
+                className="w-5 h-5 md:w-6 md:h-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -61,10 +61,10 @@ export default function Hero({ description, contact }: HeroProps) {
             </a>
             <a
               href="#servicos"
-              className="group bg-white text-orange-600 px-8 py-4 rounded-full hover:bg-orange-50 transition-all duration-300 text-center flex items-center justify-center gap-3 shadow-lg hover:shadow-xl hover:-translate-y-0.5 font-medium border border-orange-200"
+              className="group bg-white text-orange-600 px-6 md:px-8 py-2.5 md:py-4 rounded-full hover:bg-orange-50 transition-all duration-300 text-center flex items-center justify-center gap-3 shadow-lg hover:shadow-xl hover:-translate-y-0.5 font-medium border border-orange-200 text-sm md:text-base"
             >
               <svg
-                className="w-6 h-6"
+                className="w-5 h-5 md:w-6 md:h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -80,21 +80,6 @@ export default function Hero({ description, contact }: HeroProps) {
             </a>
           </div>
         </div>
-      </div>
-
-      {/* Wave Divider */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg
-          className="w-full h-auto"
-          viewBox="0 0 1440 120"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 70C840 80 960 100 1080 110C1200 120 1320 110 1380 105L1440 100V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V120Z"
-            fill="white"
-          />
-        </svg>
       </div>
     </section>
   );

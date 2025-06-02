@@ -12,11 +12,13 @@ import ScrollToTop from './components/ScrollToTop';
 import BenefitsSection from './components/BenefitsSection';
 import RotatingKeywords from './components/RotatingKeywords';
 import ClientsSlider from './components/ClientsSlider';
+import ImageSlider from './components/ImageSlider';
 
 import { siteConfig } from './config/site';
 import { services } from './config/services';
 import { metrics } from './config/metrics';
 import { about } from './config/about';
+import { portfolioImages } from './config/portfolio';
 
 export default function Home() {
   return (
@@ -27,7 +29,6 @@ export default function Home() {
         navigation={[
           { title: 'Início', href: '/' },
           { title: 'Serviços', href: '/#servicos' },
-          { title: 'Projetos', href: '/projetos' },
           { title: 'Sobre', href: '/#sobre' },
           { title: 'Contato', href: '/#contato' }
         ]}
@@ -40,6 +41,20 @@ export default function Home() {
         contact={siteConfig.contact}
       />
 
+      <section className="py-16 bg-gradient-to-b from-white to-orange-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Nosso Portfólio
+            </h2>
+            <p className="text-lg text-gray-600">
+              Conheça alguns dos nossos trabalhos realizados
+            </p>
+          </div>
+          <ImageSlider images={portfolioImages} />
+        </div>
+      </section>
+
       <BenefitsSection />
 
       <Services
@@ -49,7 +64,6 @@ export default function Home() {
       />
 
       <Metrics metrics={metrics} />
-
 
       <About
         mission={about.mission}

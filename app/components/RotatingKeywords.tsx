@@ -1,38 +1,26 @@
 'use client';
 
 const keywords = [
-    'Limpeza de Fachada',
-    'Limpeza de Vidros',
-    'Limpeza de ACM',
-    'Ancoragem',
-    'Linha de Vida'
+    { text: 'Limpeza de Fachada', href: '#servicos' },
+    { text: 'Limpeza de Vidros', href: '#servicos-pele-vidro' },
+    { text: 'Limpeza de ACM', href: '#servicos-acm' },
+    { text: 'Ancoragem', href: '#servicos-ancoragem' },
+    { text: 'Linha de Vida', href: '#servicos-ancoragem' }
 ];
 
 export default function RotatingKeywords() {
-    // Multiplicamos as keywords várias vezes para garantir preenchimento contínuo
-    const allKeywords = [...keywords, ...keywords, ...keywords, ...keywords];
-
     return (
-        <div className="w-full bg-orange-500 py-3 mt-20 overflow-hidden">
-            <div className="relative flex">
-                <div className="animate-scroll flex gap-8 whitespace-nowrap">
-                    {allKeywords.map((keyword, index) => (
-                        <span
-                            key={`${keyword}-${index}`}
-                            className="text-white font-bold text-xl md:text-2xl px-4"
+        <div className="w-full bg-orange-500 py-4 mt-20">
+            <div className="container mx-auto px-4">
+                <div className="flex justify-center items-center flex-wrap gap-x-4 gap-y-3">
+                    {keywords.map((keyword, index) => (
+                        <a
+                            key={`${keyword.text}-${index}`}
+                            href={keyword.href}
+                            className="text-white font-bold text-base sm:text-lg md:text-xl lg:text-2xl px-3 py-1 hover:text-orange-100 transition-colors cursor-pointer"
                         >
-                            {keyword}
-                        </span>
-                    ))}
-                </div>
-                <div className="animate-scroll flex gap-8 whitespace-nowrap" aria-hidden="true">
-                    {allKeywords.map((keyword, index) => (
-                        <span
-                            key={`${keyword}-second-${index}`}
-                            className="text-white font-bold text-xl md:text-2xl px-4"
-                        >
-                            {keyword}
-                        </span>
+                            {keyword.text}
+                        </a>
                     ))}
                 </div>
             </div>
